@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btBackgroundImageOverlay">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+        <field name="fID" type="I">
+            <unsigned />
+            <default value="0" />
+        </field>
+        <field name="bgResponsive" type="I"></field>
+        <field name="bgFocalPoint" type="I"></field>
+        <field name="bgFocalPointX" type="I"></field>
+        <field name="bgFocalPointY" type="I"></field>
+        <field name="bgOverlayColor" type="C"></field>
+        <field name="bgOverlayColorFallback" type="C"></field>
+        <field name="bgFallbackColor" type="C"></field>
+        <field name="bgVignetteColor" type="C"></field>
+        <field name="elementalOverride" type="I"></field>
+	</table>
+</schema>
