@@ -14,7 +14,7 @@ class Controller extends Package
 {
 	protected $pkgHandle = 'background_image_overlay';
 	protected $appVersionRequired = '5.7.3';
-	protected $pkgVersion = '0.9.8';
+	protected $pkgVersion = '0.9.9';
 
 	public function getPackageName()
 	{
