@@ -121,11 +121,11 @@ footer#footer-theme section {
 <script>
 $(document).ready(function() {
     var is_webkit = navigator.userAgent.match(/(AppleWebKit)/gi) !== null;
-    var webkit_string = navigator.userAgent.match(/(AppleWebKit\/\d\d\d)/gi);
+    var webkit_string = navigator.userAgent.match(/(AppleWebKit\/\d{3,})/gi);
     var webkit_version = false;
 
     if (is_webkit) {
-        webkit_version = parseInt(webkit_string[0].match(/(\d\d\d)/gi));
+        webkit_version = parseInt(webkit_string[0].match(/(\d{3,})/gi));
     }
 
     var is_stock_android_browser = navigator.userAgent.match(/(Android)/gi) !== null
@@ -136,12 +136,12 @@ $(document).ready(function() {
     var is_operamini = navigator.userAgent.match(/(Opera Mini)/gi) !== null;
 
     var is_mobilesafari = navigator.userAgent.match(/(iPhone)/gi) !== null || navigator.userAgent.match(/(iPad)/gi) !== null;
-    var ios_string = navigator.userAgent.match(/(OS \d_\d)/gi);
+    var ios_string = navigator.userAgent.match(/(OS \d*_\d)/gi);
     var ios_version;
     var is_mobilesafari_sub5_1 = false;
 
     if (is_mobilesafari) {
-        ios_version = ios_string[0].match(/(\d_\d)/gi);
+        ios_version = ios_string[0].match(/(\d*_\d)/gi);
         ios_version = parseFloat(ios_version[0].replace('_', '.'));
         if (ios_version < 5.1) {
             is_mobilesafari_sub5_1 = true;
@@ -178,4 +178,3 @@ $(document).ready(function() {
     }
 });
 </script>
-
